@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cognifyz</title>
+    <meta charset="utf-8">
+    <title>Simple Calculator using HTML, CSS and JavaScript</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav>
-        <div class="logo">
-            <img src="https://png.pngtree.com/png-clipart/20220602/original/pngtree-bird-handicraft-logo-png-png-image_7885248.png" alt="Logo">
-            <span>Craftify</span>
-        </div>
-        <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
+    <h1>CALCULATOR</h1>
 
-    <div class="header">
-        <h1>Handicraft Products</h1>
-        <p>Handicraft images offer a glimpse into the world of artisanal creativity and skill. They capture the beauty of handmade objects, showcasing the intricate details and cultural significance behind each piece. From pottery to textiles, these images celebrate the craftsmanship and traditions passed down through generations, reminding us of the value of preserving cultural heritage in a rapidly changing world.</p>
-    </div>
+    <table class="calculator">
+        <tr>
+            <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
 
-    <div class="form-container">
-        <form>
-            <input type="text" placeholder="Enter your product">
-            <input type="submit" value="Search">
-        </form>
-    </div>
+            <!-- clearScreen() function clears all the values -->
+            <td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+        </tr>
+        <tr>
+            <!-- display() function displays the value of clicked button -->
+            <td> <input type="button" value="1" onclick="display(this)" /> </td>
+            <td> <input type="button" value="2" onclick="display(this)" /> </td>
+            <td> <input type="button" value="3" onclick="display(this)" /> </td>
+            <td> <input type="button" value="/" onclick="display(this)" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="4" onclick="display(this)" /> </td>
+            <td> <input type="button" value="5" onclick="display(this)" /> </td>
+            <td> <input type="button" value="6" onclick="display(this)" /> </td>
+            <td> <input type="button" value="-" onclick="display(this)" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="7" onclick="display(this)" /> </td>
+            <td> <input type="button" value="8" onclick="display(this)" /> </td>
+            <td> <input type="button" value="9" onclick="display(this)" /> </td>
+            <td> <input type="button" value="+" onclick="display(this)" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="." onclick="display(this)" /> </td>
+            <td> <input type="button" value="0" onclick="display(this)" /> </td>
+
+            <!-- calculate() function evaluates the mathematical expression -->
+            <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+            <td> <input type="button" value="*" onclick="display(this)" /> </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="script.js"></script>
+
 
 </body>
+
 </html>
